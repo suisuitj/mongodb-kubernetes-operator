@@ -37,7 +37,7 @@ func (c client) CreateOrUpdate(obj runtime.Object) error {
 		}
 		return err
 	}
-	return c.Update(context.TODO(), obj)
+	return c.Update(context.TODO(), objCopy)
 }
 
 // GetAndUpdate fetches the most recent version of the runtime.Object with the provided
